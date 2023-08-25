@@ -29,4 +29,4 @@ jobs:
       with:
         name: JUnit Test Results
         path: '**/target/surefire-reports/TEST-*.xml'
-        reporter: junit
+        reporter: java-junit
