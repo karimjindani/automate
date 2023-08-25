@@ -1,8 +1,8 @@
 package com.example.multiplyintegers;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MultiplyIntegersTest {
 
@@ -24,4 +24,8 @@ public class MultiplyIntegersTest {
         assertEquals(210, result);
     }
 
+    @Test
+    public void testNoNumber() {
+        assertThrows(IllegalArgumentException.class, () -> MultiplyIntegers.multiply());
+    }
 }
